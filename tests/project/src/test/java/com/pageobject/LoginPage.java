@@ -44,6 +44,7 @@ public class LoginPage extends BasePageObject {
     }
 
     public void verify_correct_credentials_msg() {
+        System.out.println("Page title is : " + driver.getTitle());
         final String WELCOME_MSG = "You logged into a secure area!";
         String actual_msg = this.get_confirm_msg_after_login();
         boolean does_msg_contain_wrong_msg = actual_msg.contains(WELCOME_MSG);
